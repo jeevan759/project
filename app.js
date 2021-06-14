@@ -10,6 +10,7 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 dbconnect.connect();
+require('./backend/lib/dbuserbootstarp').createUsers();
 
 app.use(logger('dev'));
 app.use(express.json());
